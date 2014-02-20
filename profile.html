@@ -4,6 +4,17 @@
 
 <head>
 <title>Fecesbook</title>
+
+<script>
+	function print_status(){
+
+		var message = document.getElementById("msg").value;	
+		//console.log(message);
+		document.getElementById("status").innerHTML = message;
+
+	}
+</script>
+
 </head>
 
 <body>
@@ -19,9 +30,11 @@
 		</ul>
 	</div>
 	<h2 id="fullname">Barney Gumble</h2>
-	<h3>What are you thinking about? <input type="text" id="msg" name="msg" size="30" /></h3>
+	<h3>What are you thinking about? <input type="text" id="msg" name="msg" size="30" onchange = "print_status()"/></h3>
+
 	<h3>Updates</h3>
 	<div id="status">
+
 	</div>
 	<div id="yesterday">
 		<h3>Updates from yesterday:</h3>
