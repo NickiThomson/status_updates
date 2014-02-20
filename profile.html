@@ -7,10 +7,18 @@
 
 <script>
 	function print_status(){
-
+		var status = document.getElementById("status");
+		var today = new Date();
+		status.appendChild(document.createTextNode(today.getMonth()+1));
+		status.appendChild(document.createTextNode("/"));
+		status.appendChild(document.createTextNode(today.getDate()+1));	
+		status.appendChild(document.createTextNode("/"));
+		status.appendChild(document.createTextNode(today.getFullYear()));
+		status.appendChild(document.createTextNode(" "));
 		var message = document.getElementById("msg").value;	
 		//console.log(message);
-		document.getElementById("status").innerHTML = message;
+
+		status.appendChild(document.createTextNode(message));
 
 	}
 </script>
