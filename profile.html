@@ -15,10 +15,17 @@
 		status.appendChild(document.createTextNode("/"));
 		status.appendChild(document.createTextNode(today.getFullYear()));
 		status.appendChild(document.createTextNode(" "));
+
+		status.appendChild(document.createTextNode(today.getHours()));
+		status.appendChild(document.createTextNode(":"));
+		status.appendChild(document.createTextNode(today.getMinutes()));
+		status.appendChild(document.createTextNode(" "));
+
 		var message = document.getElementById("msg").value;	
 		//console.log(message);
 
 		status.appendChild(document.createTextNode(message));
+		status.appendChild(document.createElement("br"));
 
 	}
 </script>
